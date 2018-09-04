@@ -1,0 +1,14 @@
+/*
+ * opensha-core dependencies
+ */
+
+apply from: '../opensha-commons/build-common.gradle'
+
+dependencies {
+
+    compileOnly project(path: ':opensha-core', configuration: 'compileOnly')
+    compileAndResource project(path: ':opensha-apps')
+
+    /* no remote repo */
+    compileAndResource files('lib/DBConnection.jar')
+}
